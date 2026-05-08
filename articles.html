@@ -7,19 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Professional, non-cursive font pairing */
         @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Inter:wght@400;500;600&display=swap');
         
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: #FDFBF9; 
-            color: #3C2A21; 
-        }
-        
-        h1, h2, h3 { 
-            font-family: 'Lora', serif; 
-            font-style: normal;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #FDFBF9; color: #3C2A21; }
+        h1, h2, h3 { font-family: 'Lora', serif; font-style: normal; }
+
+        /* Hide scrollbar for mobile nav */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
         .article-card:hover img {
             transform: scale(1.05);
@@ -29,209 +24,114 @@
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="bg-white/90 backdrop-blur-md border-b border-[#EAD8C0] py-6 px-6 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-[#3C2A21] tracking-tight"><a href="index.html">VEDANSH</a></h1>
-            <div class="hidden md:flex space-x-8 font-semibold text-[11px] uppercase tracking-widest text-[#6F4E37]">
-                <a href="index.html" class="hover:text-[#3C2A21] transition">Home</a>
-                <a href="articles.html" class="text-[#3C2A21] border-b-2 border-[#895E3C] pb-1">Articles</a>
-                <a href="courses.html" class="hover:text-[#3C2A21] transition">Courses</a>
-                <a href="resources.html" class="hover:text-[#3C2A21] transition">Resources</a>
-                <a href="experience.html" class="hover:text-[#3C2A21] transition">Experience</a>
-                <a href="portfolio.html" class="hover:text-[#3C2A21] transition">Brands</a>
+    <nav class="bg-white/90 backdrop-blur-md border-b border-[#EAD8C0] py-4 md:py-6 px-4 md:px-6 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex justify-between items-center w-full md:w-auto">
+                <h1 class="text-xl md:text-2xl font-bold text-[#3C2A21] tracking-tight">
+                    <a href="index.html">VEDANSH</a>
+                </h1>
+                <a href="mailto:your-email@gmail.com" class="md:hidden text-[#895E3C]"><i class="fas fa-envelope text-lg"></i></a>
             </div>
-            <a href="mailto:your-email@gmail.com" class="text-[#895E3C] hover:text-[#3C2A21] transition"><i class="fas fa-envelope text-xl"></i></a>
+            
+            <div class="flex overflow-x-auto no-scrollbar w-full md:w-auto space-x-6 md:space-x-8 font-semibold text-[10px] md:text-[11px] uppercase tracking-widest text-[#6F4E37] pb-2 md:pb-0 justify-start md:justify-center">
+                <a href="index.html" class="whitespace-nowrap hover:text-[#3C2A21]">Home</a>
+                <a href="articles.html" class="text-[#3C2A21] border-b-2 border-[#895E3C] pb-1 whitespace-nowrap">Articles</a>
+                <a href="courses.html" class="whitespace-nowrap hover:text-[#3C2A21]">Courses</a>
+                <a href="resources.html" class="whitespace-nowrap hover:text-[#3C2A21]">Resources</a>
+                <a href="experience.html" class="whitespace-nowrap hover:text-[#3C2A21]">Experience</a>
+                <a href="portfolio.html" class="whitespace-nowrap hover:text-[#3C2A21]">Brands</a>
+            </div>
+            <a href="mailto:your-email@gmail.com" class="hidden md:block text-[#895E3C] hover:text-[#3C2A21] transition"><i class="fas fa-envelope text-xl"></i></a>
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <header class="py-20 bg-[#EAD8C0]/20 text-center border-b border-[#EAD8C0]/40">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Published Articles</h1>
-        <div class="h-1.5 w-16 bg-[#895E3C] mx-auto mb-6 rounded-full"></div>
-        <p class="text-[#6F4E37] tracking-[0.25em] uppercase text-xs font-bold">Official Contributions & Cultural Analysis</p>
+    <header class="py-12 md:py-20 bg-[#EAD8C0]/20 text-center border-b border-[#EAD8C0]/40 px-6">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Published Articles</h1>
+        <div class="h-1 w-12 md:w-16 bg-[#895E3C] mx-auto mb-6 rounded-full"></div>
+        <p class="text-[#6F4E37] tracking-[0.2em] md:tracking-[0.25em] uppercase text-[10px] md:text-xs font-bold leading-relaxed">Official Contributions & <br class="md:hidden"> Cultural Analysis</p>
     </header>
 
-    <!-- Hallyuism Intro Section -->
-    <section class="max-w-4xl mx-auto mt-20 px-6">
-        <div class="bg-white border border-[#EAD8C0] rounded-3xl p-8 md:p-12 shadow-sm flex flex-col md:flex-row items-center gap-10">
-            <div class="w-32 h-32 md:w-40 md:h-40 flex-shrink-0 bg-white overflow-hidden rounded-xl border border-[#EAD8C0]">
-                <img src="https://scontent.fdel52-1.fna.fbcdn.net/v/t39.30808-6/301912810_452072940274778_1684858105500038949_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=cfVLUSsO1WkQ7kNvwFaErIz&_nc_oc=Adofqv29wjR9RDaazsnKOefozqvg2NE8o3VXNkwEHxf13Manx5rY48O-23-p-V5925LR6zCs&_nc_zt=23&_nc_ht=scontent.fdel52-1.fna&_nc_gid=BGENEnilGPamyAan-bZt4g&_nc_ss=7b289&oh=00_Af77nCUU5C_S08zd7oOe7ZQXzMYmVzQXQPVlVQASZ6IW-A&oe=6A02A4B1" 
-                     alt="Hallyuism Logo" 
-                     class="w-full h-full object-contain">
+    <section class="max-w-4xl mx-auto mt-12 md:mt-20 px-6">
+        <div class="bg-white border border-[#EAD8C0] rounded-2xl md:rounded-3xl p-6 md:p-12 shadow-sm flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            <div class="w-24 h-24 md:w-40 md:h-40 flex-shrink-0 bg-white overflow-hidden rounded-xl border border-[#EAD8C0]">
+                <img src="https://scontent.fdel52-1.fna.fbcdn.net/v/t39.30808-6/301912810_452072940274778_1684858105500038949_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=cfVLUSsO1WkQ7kNvwFaErIz&_nc_oc=Adofqv29wjR9RDaazsnKOefozqvg2NE8o3VXNkwEHxf13Manx5rY48O-23-p-V5925LR6zCs&_nc_zt=23&_nc_ht=scontent.fdel52-1.fna&_nc_gid=BGENEnilGPamyAan-bZt4g&_nc_ss=7b289&oh=00_Af77nCUU5C_S08zd7oOe7ZQXzMYmVzQXQPVlVQASZ6IW-A&oe=6A02A4B1" alt="Hallyuism Logo" class="w-full h-full object-contain p-2">
             </div>
             <div class="text-center md:text-left">
-                <h2 class="text-2xl font-bold mb-4">About Hallyuism</h2>
-                <p class="text-[#6F4E37] leading-relaxed mb-4">
-                    <strong>Hallyuism</strong> is a premier digital publication dedicated to the global phenomenon of the Korean Wave. As a curated platform for Hallyu enthusiasts, it provides deep-dives into K-pop aesthetics and authentic Korean lifestyle reviews.
+                <h2 class="text-xl md:text-2xl font-bold mb-3 md:mb-4">About Hallyuism</h2>
+                <p class="text-[#6F4E37] text-sm md:text-base leading-relaxed">
+                    <strong>Hallyuism</strong> is a premier digital publication dedicated to the global phenomenon of the Korean Wave. As a curated platform, it provides deep-dives into K-pop aesthetics and authentic lifestyle reviews.
                 </p>
-                            </div>
+            </div>
         </div>
     </section>
 
-    <main class="max-w-6xl mx-auto py-24 px-6">
-        <div class="space-y-24">
+    <main class="max-w-6xl mx-auto py-16 md:py-24 px-6">
+        <div class="space-y-16 md:space-y-24">
 
-            <!-- 1. Text Painting -->
-            <div class="flex flex-col md:flex-row gap-10 items-center group">
-                <div class="w-full md:w-1/3 overflow-hidden rounded-2xl shadow-sm aspect-video md:aspect-square">
-                    <img src="https://i0.wp.com/hallyuism.com/wp-content/uploads/2024/10/pic.jpg?resize=640%2C640&ssl=1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="flex flex-col md:flex-row gap-6 md:gap-10 items-center group article-card">
+                <div class="w-full md:w-1/3 overflow-hidden rounded-2xl shadow-sm aspect-[16/9] md:aspect-square">
+                    <img src="https://i0.wp.com/hallyuism.com/wp-content/uploads/2024/10/pic.jpg?resize=640%2C640&ssl=1" class="w-full h-full object-cover transition duration-500">
                 </div>
                 <div class="w-full md:w-2/3">
-                    <span class="text-[#895E3C] font-bold text-[10px] uppercase tracking-widest bg-[#EAD8C0]/30 px-3 py-1 rounded-full">K-POP</span>
-                    <h2 class="text-3xl font-bold mt-4 mb-4 group-hover:text-[#895E3C] transition">Text Painting in K-pop: A Concept That Will Blow Your Mind</h2>
+                    <span class="text-[#895E3C] font-bold text-[9px] md:text-[10px] uppercase tracking-widest bg-[#EAD8C0]/30 px-3 py-1 rounded-full">K-POP</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mt-4 mb-3 md:mb-4 group-hover:text-[#895E3C] transition leading-tight">Text Painting in K-pop: A Concept That Will Blow Your Mind</h2>
                     <p class="text-[#6F4E37] leading-relaxed mb-6 text-sm">Explaining the intricate link between musical composition and lyrical themes in modern idols' discography.</p>
-                    <a href="https://hallyuism.com/2024/10/18/text-painting-in-k-pop-a-concept-that-will-blow-your-mind/" target="_blank" class="inline-block border-b-2 border-[#3C2A21] pb-1 font-bold text-xs hover:text-[#895E3C] hover:border-[#895E3C] transition uppercase tracking-widest">Read Article</a>
+                    <a href="https://hallyuism.com/2024/10/18/text-painting-in-k-pop-a-concept-that-will-blow-your-mind/" target="_blank" class="inline-block border-b-2 border-[#3C2A21] pb-1 font-bold text-[10px] md:text-xs hover:text-[#895E3C] hover:border-[#895E3C] transition uppercase tracking-widest">Read Article</a>
                 </div>
             </div>
 
-            <!-- 2. Experimental K-pop -->
-            <div class="flex flex-col md:flex-row gap-10 items-center group">
-                <div class="w-full md:w-1/3 overflow-hidden rounded-2xl shadow-sm aspect-video md:aspect-square">
-                    <img src="https://i0.wp.com/hallyuism.com/wp-content/uploads/2025/10/photo-1.jpg?resize=600%2C600&ssl=1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="flex flex-col md:flex-row gap-6 md:gap-10 items-center group article-card">
+                <div class="w-full md:w-1/3 overflow-hidden rounded-2xl shadow-sm aspect-[16/9] md:aspect-square">
+                    <img src="https://i0.wp.com/hallyuism.com/wp-content/uploads/2025/10/photo-1.jpg?resize=600%2C600&ssl=1" class="w-full h-full object-cover transition duration-500">
                 </div>
                 <div class="w-full md:w-2/3">
-                    <span class="text-[#895E3C] font-bold text-[10px] uppercase tracking-widest bg-[#EAD8C0]/30 px-3 py-1 rounded-full">K-POP</span>
-                    <h2 class="text-3xl font-bold mt-4 mb-4 group-hover:text-[#895E3C] transition">Experimental K-pop Songs</h2>
+                    <span class="text-[#895E3C] font-bold text-[9px] md:text-[10px] uppercase tracking-widest bg-[#EAD8C0]/30 px-3 py-1 rounded-full">K-POP</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mt-4 mb-3 md:mb-4 group-hover:text-[#895E3C] transition leading-tight">Experimental K-pop Songs</h2>
                     <p class="text-[#6F4E37] leading-relaxed mb-6 text-sm">Reviewing the tracks that redefined genre boundaries through innovative sound design.</p>
-                    <a href="https://hallyuism.com/2025/11/26/experimental-k-pop-songs-that-will-leave-you-speechless/" target="_blank" class="inline-block border-b-2 border-[#3C2A21] pb-1 font-bold text-xs hover:text-[#895E3C] hover:border-[#895E3C] transition uppercase tracking-widest">Read Article</a>
+                    <a href="https://hallyuism.com/2025/11/26/experimental-k-pop-songs-that-will-leave-you-speechless/" target="_blank" class="inline-block border-b-2 border-[#3C2A21] pb-1 font-bold text-[10px] md:text-xs hover:text-[#895E3C] hover:border-[#895E3C] transition uppercase tracking-widest">Read Article</a>
                 </div>
             </div>
 
-            <!-- 3. Stray Kids -->
-            <div class="flex flex-col md:flex-row gap-10 items-center group">
-                <div class="w-full md:w-1/3 overflow-hidden rounded-2xl shadow-sm aspect-video md:aspect-square">
-                    <img src="https://i0.wp.com/hallyuism.com/wp-content/uploads/2024/03/image-45.png?w=599&ssl=1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="flex flex-col md:flex-row gap-6 md:gap-10 items-center group article-card">
+                <div class="w-full md:w-1/3 overflow-hidden rounded-2xl shadow-sm aspect-[16/9] md:aspect-square">
+                    <img src="https://i0.wp.com/hallyuism.com/wp-content/uploads/2024/03/image-45.png?w=599&ssl=1" class="w-full h-full object-cover transition duration-500">
                 </div>
                 <div class="w-full md:w-2/3">
-                    <span class="text-[#895E3C] font-bold text-[10px] uppercase tracking-widest bg-[#EAD8C0]/30 px-3 py-1 rounded-full">K-POP</span>
-                    <h2 class="text-3xl font-bold mt-4 mb-4 group-hover:text-[#895E3C] transition">Meaningful Stray Kids Songs</h2>
+                    <span class="text-[#895E3C] font-bold text-[9px] md:text-[10px] uppercase tracking-widest bg-[#EAD8C0]/30 px-3 py-1 rounded-full">K-POP</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mt-4 mb-3 md:mb-4 group-hover:text-[#895E3C] transition leading-tight">Meaningful Stray Kids Songs</h2>
                     <p class="text-[#6F4E37] leading-relaxed mb-6 text-sm">A lyrical analysis of Stray Kids' most relatable and emotionally resonant tracks.</p>
-                    <a href="https://hallyuism.com/2024/03/22/6-meaningful-stray-kids-songs-that-we-all-can-relate-to/" target="_blank" class="inline-block border-b-2 border-[#3C2A21] pb-1 font-bold text-xs hover:text-[#895E3C] hover:border-[#895E3C] transition uppercase tracking-widest">Read Article</a>
+                    <a href="https://hallyuism.com/2024/03/22/6-meaningful-stray-kids-songs-that-we-all-can-relate-to/" target="_blank" class="inline-block border-b-2 border-[#3C2A21] pb-1 font-bold text-[10px] md:text-xs hover:text-[#895E3C] hover:border-[#895E3C] transition uppercase tracking-widest">Read Article</a>
                 </div>
             </div>
 
-            <!-- 4. Street Fair -->
-            <div class="flex flex-col md:flex-row gap-10 items-center group">
-                <div class="w-full md:w-1/3 overflow-hidden rounded-2xl shadow-sm aspect-video md:aspect-square">
-                    <img src="https://i0.wp.com/hallyuism.com/wp-content/uploads/2024/04/image-44.png?w=903&ssl=1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="flex flex-col md:flex-row gap-6 md:gap-10 items-center group article-card">
+                <div class="w-full md:w-1/3 overflow-hidden rounded-2xl shadow-sm aspect-[16/9] md:aspect-square">
+                    <img src="https://i0.wp.com/hallyuism.com/wp-content/uploads/2024/04/image-44.png?w=903&ssl=1" class="w-full h-full object-cover transition duration-500">
                 </div>
                 <div class="w-full md:w-2/3">
-                    <span class="text-[#895E3C] font-bold text-[10px] uppercase tracking-widest bg-[#EAD8C0]/30 px-3 py-1 rounded-full">EVENTS</span>
-                    <h2 class="text-3xl font-bold mt-4 mb-4 group-hover:text-[#895E3C] transition">Korea Street Fair 2024</h2>
+                    <span class="text-[#895E3C] font-bold text-[9px] md:text-[10px] uppercase tracking-widest bg-[#EAD8C0]/30 px-3 py-1 rounded-full">EVENTS</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mt-4 mb-3 md:mb-4 group-hover:text-[#895E3C] transition leading-tight">Korea Street Fair 2024</h2>
                     <p class="text-[#6F4E37] leading-relaxed mb-6 text-sm">Covering the cultural vibrancy of Delhi's premier Korean street fair.</p>
-                    <a href="http://hallyuism.com/2024/04/29/korea-street-fair-2024/" target="_blank" class="inline-block border-b-2 border-[#3C2A21] pb-1 font-bold text-xs hover:text-[#895E3C] hover:border-[#895E3C] transition uppercase tracking-widest">Read Article</a>
+                    <a href="http://hallyuism.com/2024/04/29/korea-street-fair-2024/" target="_blank" class="inline-block border-b-2 border-[#3C2A21] pb-1 font-bold text-[10px] md:text-xs hover:text-[#895E3C] hover:border-[#895E3C] transition uppercase tracking-widest">Read Article</a>
                 </div>
             </div>
 
-            <!-- 5. Karnival -->
-            <div class="flex flex-col md:flex-row gap-10 items-center group">
-                <div class="w-full md:w-1/3 overflow-hidden rounded-2xl shadow-sm aspect-video md:aspect-square">
-                    <img src="https://i0.wp.com/hallyuism.com/wp-content/uploads/2024/05/Image-09-05-2024-at-17.07.jpeg?resize=759%2C1024&ssl=1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="flex flex-col md:flex-row gap-6 md:gap-10 items-center group article-card">
+                <div class="w-full md:w-1/3 overflow-hidden rounded-2xl shadow-sm aspect-[16/9] md:aspect-square">
+                    <img src="https://i0.wp.com/hallyuism.com/wp-content/uploads/2024/07/Screenshot_2024-06-19-20-02-33-700_com.gallery.player-2.jpg?resize=738%2C1024&ssl=1" class="w-full h-full object-cover transition duration-500">
                 </div>
                 <div class="w-full md:w-2/3">
-                    <span class="text-[#895E3C] font-bold text-[10px] uppercase tracking-widest bg-[#EAD8C0]/30 px-3 py-1 rounded-full">EVENTS</span>
-                    <h2 class="text-3xl font-bold mt-4 mb-4 group-hover:text-[#895E3C] transition">Korean Karnival: Aerocity</h2>
-                    <p class="text-[#6F4E37] leading-relaxed mb-6 text-sm">Event review of the Worldmark Aerocity cultural gathering.</p>
-                    <a href="https://hallyuism.com/2024/05/09/k-event-review-korean-karnival-2024-worldmark-aerocity-delhi/" target="_blank" class="inline-block border-b-2 border-[#3C2A21] pb-1 font-bold text-xs hover:text-[#895E3C] hover:border-[#895E3C] transition uppercase tracking-widest">Read Article</a>
-                </div>
-            </div>
-
-            <!-- 6. Aoora -->
-            <div class="flex flex-col md:flex-row gap-10 items-center group">
-                <div class="w-full md:w-1/3 overflow-hidden rounded-2xl shadow-sm aspect-video md:aspect-square">
-                    <img src="https://i0.wp.com/hallyuism.com/wp-content/uploads/2024/02/photo_2024-02-16-14.30.31.jpeg?w=750&ssl=1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="w-full md:w-2/3">
-                    <span class="text-[#895E3C] font-bold text-[10px] uppercase tracking-widest bg-[#EAD8C0]/30 px-3 py-1 rounded-full">EVENTS</span>
-                    <h2 class="text-3xl font-bold mt-4 mb-4 group-hover:text-[#895E3C] transition">Aoora's Delhi Meet & Greet</h2>
-                    <p class="text-[#6F4E37] leading-relaxed mb-6 text-sm">Recapping the energy and performance of the K-pop star in the capital.</p>
-                    <a href="http://hallyuism.com/2024/02/17/k-event-review-aooras-meet-and-greet-in-delhi/" target="_blank" class="inline-block border-b-2 border-[#3C2A21] pb-1 font-bold text-xs hover:text-[#895E3C] hover:border-[#895E3C] transition uppercase tracking-widest">Read Article</a>
-                </div>
-            </div>
-
-            <!-- 7. University War -->
-            <div class="flex flex-col md:flex-row gap-10 items-center group">
-                <div class="w-full md:w-1/3 overflow-hidden rounded-2xl shadow-sm aspect-video md:aspect-square">
-                    <img src="https://i0.wp.com/hallyuism.com/wp-content/uploads/2024/07/image-6.png?w=638&ssl=1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="w-full md:w-2/3">
-                    <span class="text-[#895E3C] font-bold text-[10px] uppercase tracking-widest bg-[#EAD8C0]/30 px-3 py-1 rounded-full">VARIETY SHOWS</span>
-                    <h2 class="text-3xl font-bold mt-4 mb-4 group-hover:text-[#895E3C] transition">University War Elite League</h2>
-                    <p class="text-[#6F4E37] leading-relaxed mb-6 text-sm">A deep dive into the hit Korean intellectual survival show.</p>
-                    <a href="https://hallyuism.com/2024/07/13/k-show-review-university-war-elite-league/" target="_blank" class="inline-block border-b-2 border-[#3C2A21] pb-1 font-bold text-xs hover:text-[#895E3C] hover:border-[#895E3C] transition uppercase tracking-widest">Read Article</a>
-                </div>
-            </div>
-
-            <!-- 8. iYeppeo -->
-            <div class="flex flex-col md:flex-row gap-10 items-center group">
-                <div class="w-full md:w-1/3 overflow-hidden rounded-2xl shadow-sm aspect-video md:aspect-square">
-                    <img src="https://i0.wp.com/hallyuism.com/wp-content/uploads/2024/05/Picsart_24-04-25_18-23-23-269.jpg?resize=1536%2C1159&ssl=1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="w-full md:w-2/3">
-                    <span class="text-[#895E3C] font-bold text-[10px] uppercase tracking-widest bg-[#EAD8C0]/30 px-3 py-1 rounded-full">K-BEAUTY</span>
-                    <h2 class="text-3xl font-bold mt-4 mb-4 group-hover:text-[#895E3C] transition">iYeppeo by Jenna Launch</h2>
-                    <p class="text-[#6F4E37] leading-relaxed mb-6 text-sm">Covering the expansion of authentic Korean skincare in the Indian market.</p>
-                    <a href="https://hallyuism.com/2024/05/12/k-interview-launch-of-skincare-brand-iyeppeo-by-jenna/" target="_blank" class="inline-block border-b-2 border-[#3C2A21] pb-1 font-bold text-xs hover:text-[#895E3C] hover:border-[#895E3C] transition uppercase tracking-widest">Read Article</a>
-                </div>
-            </div>
-
-            <!-- 9. Dongne Cafe -->
-            <div class="flex flex-col md:flex-row gap-10 items-center group">
-                <div class="w-full md:w-1/3 overflow-hidden rounded-2xl shadow-sm aspect-video md:aspect-square">
-                    <img src="https://i0.wp.com/hallyuism.com/wp-content/uploads/2024/07/Screenshot_2024-06-19-20-02-33-700_com.gallery.player-2.jpg?resize=738%2C1024&ssl=1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="w-full md:w-2/3">
-                    <span class="text-[#895E3C] font-bold text-[10px] uppercase tracking-widest bg-[#EAD8C0]/30 px-3 py-1 rounded-full">RESTAURANTS</span>
-                    <h2 class="text-3xl font-bold mt-4 mb-4 group-hover:text-[#895E3C] transition">Dongne: Korean Town in Delhi</h2>
+                    <span class="text-[#895E3C] font-bold text-[9px] md:text-[10px] uppercase tracking-widest bg-[#EAD8C0]/30 px-3 py-1 rounded-full">RESTAURANTS</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mt-4 mb-3 md:mb-4 group-hover:text-[#895E3C] transition leading-tight">Dongne: Korean Town in Delhi</h2>
                     <p class="text-[#6F4E37] leading-relaxed mb-6 text-sm">Reviewing the atmosphere and flavors of this aesthetic Korean cafe.</p>
-                    <a href="https://hallyuism.com/2024/09/25/k-restaurant-review-dongne-the-town-in-delhi-korean-cafe/" target="_blank" class="inline-block border-b-2 border-[#3C2A21] pb-1 font-bold text-xs hover:text-[#895E3C] hover:border-[#895E3C] transition uppercase tracking-widest">Read Article</a>
-                </div>
-            </div>
-
-            <!-- 10. Hanok Kitchen -->
-            <div class="flex flex-col md:flex-row gap-10 items-center group">
-                <div class="w-full md:w-1/3 overflow-hidden rounded-2xl shadow-sm aspect-video md:aspect-square">
-                    <img src="https://i0.wp.com/hallyuism.com/wp-content/uploads/2024/02/image-82.png?w=728&ssl=1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="w-full md:w-2/3">
-                    <span class="text-[#895E3C] font-bold text-[10px] uppercase tracking-widest bg-[#EAD8C0]/30 px-3 py-1 rounded-full">RESTAURANTS</span>
-                    <h2 class="text-3xl font-bold mt-4 mb-4 group-hover:text-[#895E3C] transition">Hanok Kitchen Delhi</h2>
-                    <p class="text-[#6F4E37] leading-relaxed mb-6 text-sm">Exploring traditional Korean culinary excellence in Delhi.</p>
-                    <a href="https://hallyuism.com/2024/02/26/k-restaurant-review-hanok-korean-kitchen-delhi/" target="_blank" class="inline-block border-b-2 border-[#3C2A21] pb-1 font-bold text-xs hover:text-[#895E3C] hover:border-[#895E3C] transition uppercase tracking-widest">Read Article</a>
-                </div>
-            </div>
-
-            <!-- 11. Kia's Cafe -->
-            <div class="flex flex-col md:flex-row gap-10 items-center group">
-                <div class="w-full md:w-1/3 overflow-hidden rounded-2xl shadow-sm aspect-video md:aspect-square">
-                    <img src="https://i0.wp.com/hallyuism.com/wp-content/uploads/2024/06/cafe1.jpg?resize=768%2C924&ssl=1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="w-full md:w-2/3">
-                    <span class="text-[#895E3C] font-bold text-[10px] uppercase tracking-widest bg-[#EAD8C0]/30 px-3 py-1 rounded-full">RESTAURANTS</span>
-                    <h2 class="text-3xl font-bold mt-4 mb-4 group-hover:text-[#895E3C] transition">Kia's Cafe Review</h2>
-                    <p class="text-[#6F4E37] leading-relaxed mb-6 text-sm">A look at the comfort food and vibes of Delhi's Kia Cafe.</p>
-                    <a href="https://hallyuism.com/2024/07/30/k-restaurant-review-kias-cafe-delhi/" target="_blank" class="inline-block border-b-2 border-[#3C2A21] pb-1 font-bold text-xs hover:text-[#895E3C] hover:border-[#895E3C] transition uppercase tracking-widest">Read Article</a>
-                </div>
-            </div>
-
-            <!-- 12. Bubblin Cafe -->
-            <div class="flex flex-col md:flex-row gap-10 items-center group">
-                <div class="w-full md:w-1/3 overflow-hidden rounded-2xl shadow-sm aspect-video md:aspect-square">
-                    <img src="https://hallyuism.com/wp-content/uploads/2024/04/image-64.png" onerror="this.src='https://images.unsplash.com/photo-1544333346-6466660161bc?q=80&w=1000'" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="w-full md:w-2/3">
-                    <span class="text-[#895E3C] font-bold text-[10px] uppercase tracking-widest bg-[#EAD8C0]/30 px-3 py-1 rounded-full">RESTAURANTS</span>
-                    <h2 class="text-3xl font-bold mt-4 mb-4 group-hover:text-[#895E3C] transition">Bubblin Cafe Review</h2>
-                    <p class="text-[#6F4E37] leading-relaxed mb-6 text-sm">Reviewing the boba and snacks at this Delhi favorite.</p>
-                    <a href="https://hallyuism.com/2024/05/02/k-restaurant-review-bubblin-cafe/" target="_blank" class="inline-block border-b-2 border-[#3C2A21] pb-1 font-bold text-xs hover:text-[#895E3C] hover:border-[#895E3C] transition uppercase tracking-widest">Read Article</a>
+                    <a href="https://hallyuism.com/2024/09/25/k-restaurant-review-dongne-the-town-in-delhi-korean-cafe/" target="_blank" class="inline-block border-b-2 border-[#3C2A21] pb-1 font-bold text-[10px] md:text-xs hover:text-[#895E3C] hover:border-[#895E3C] transition uppercase tracking-widest">Read Article</a>
                 </div>
             </div>
 
         </div>
     </main>
 
-    <footer class="py-20 text-center border-t border-[#EAD8C0] mt-10">
+    <footer class="py-16 text-center border-t border-[#EAD8C0]">
         <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-[#6F4E37]">© 2026 Vedansh | Hallyuism Columnist</p>
     </footer>
 
