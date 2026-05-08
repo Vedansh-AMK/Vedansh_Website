@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedansh | Language, Content & Culture Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; background-color: #FDFBF9; color: #3C2A21; }
+        h1, h2, .font-serif { font-family: 'Playfair Display', serif; }
+        
+        .carousel-container { overflow: hidden; position: relative; border-radius: 24px; }
+        .carousel-track { display: flex; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .carousel-slide { min-width: 100%; position: relative; }
+        .btn-coffee { background-color: #895E3C; color: #fff; transition: 0.3s; }
+        .btn-coffee:hover { background-color: #6F4E37; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation (Updated with all your new pages) -->
+    <nav class="bg-white/80 backdrop-blur-md border-b border-[#EAD8C0] py-6 px-6 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-3xl italic font-bold text-[#3C2A21]"><a href="index.html">Vedansh.</a></h1>
+            
+            <!-- This is the section from Step 3 -->
+            <div class="hidden md:flex space-x-6 font-medium text-xs uppercase tracking-wider text-[#6F4E37]">
+                <a href="index.html" class="hover:text-[#3C2A21] border-b-2 border-[#895E3C]">Home</a>
+                <a href="articles.html" class="hover:text-[#3C2A21]">Articles</a>
+                <a href="courses.html" class="hover:text-[#3C2A21]">Courses</a>
+                <a href="resources.html" class="hover:text-[#3C2A21]">Resources</a>
+                <a href="experience.html" class="hover:text-[#3C2A21]">Experience</a>
+                <a href="portfolio.html" class="hover:text-[#3C2A21]">Brands</a>
+            </div>
+
+            <a href="mailto:your-email@gmail.com" class="text-[#895E3C]"><i class="fas fa-envelope text-xl"></i></a>
+        </div>
+    </nav>
+
+    <!-- 1. Featured Carousel (Linked to Articles) -->
+    <section class="max-w-6xl mx-auto mt-8 px-6">
+        <div class="carousel-container shadow-2xl bg-[#3C2A21]">
+            <div class="carousel-track" id="track">
+                <!-- Slide 1 -->
+                <div class="carousel-slide h-[500px]">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2000" class="w-full h-full object-cover opacity-60">
+                    <div class="absolute inset-0 flex flex-col justify-end p-12 text-white bg-gradient-to-t from-[#3C2A21]/90 to-transparent">
+                        <span class="bg-[#D4A373] text-[#3C2A21] px-3 py-1 text-xs font-bold rounded-full w-fit mb-4 uppercase">Latest Article</span>
+                        <a href="articles.html" class="text-4xl font-bold hover:text-[#D4A373] transition">The Coffee-Shop Study Guide: Mastering TOPIK II</a>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-slide h-[500px]">
+                    <img src="https://images.unsplash.com/photo-1554224155-169641357599?q=80&w=2000" class="w-full h-full object-cover opacity-60">
+                    <div class="absolute inset-0 flex flex-col justify-end p-12 text-white bg-gradient-to-t from-[#3C2A21]/90 to-transparent">
+                        <span class="bg-[#D4A373] text-[#3C2A21] px-3 py-1 text-xs font-bold rounded-full w-fit mb-4 uppercase">Event Log</span>
+                        <a href="experience.html" class="text-4xl font-bold hover:text-[#D4A373] transition">B2B Interpreting: Bridging New Delhi and Seoul</a>
+                    </div>
+                </div>
+            </div>
+            <button onclick="moveSlide(-1)" class="absolute left-6 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-4 rounded-full text-white backdrop-blur-md">❮</button>
+            <button onclick="moveSlide(1)" class="absolute right-6 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-4 rounded-full text-white backdrop-blur-md">❯</button>
+        </div>
+    </section>
+
+    <!-- 2. Brief Intro Section -->
+    <section class="max-w-5xl mx-auto py-20 px-6">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <img src="https://via.placeholder.com/300" class="w-56 h-56 rounded-full object-cover border-8 border-white shadow-xl">
+            <div>
+                <h2 class="text-4xl font-bold mb-4 italic text-[#3C2A21]">Annyeong, I'm Vedansh.</h2>
+                <p class="text-xl text-[#6F4E37] leading-relaxed">
+                    I am a Korean language educator and interpreter. My mission is to simplify the learning process through strategic frameworks. Whether I'm facilitating B2B meetings or creating content for my community, I believe in bridging cultures with clarity.
+                </p>
+                <div class="mt-6 flex gap-4">
+                    <a href="experience.html" class="btn-coffee px-6 py-2 rounded-full text-sm font-bold">My Story</a>
+                    <a href="portfolio.html" class="border border-[#895E3C] text-[#895E3C] px-6 py-2 rounded-full text-sm font-bold">Brand Collabs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Courses & Reviews Preview -->
+    <section class="bg-[#EAD8C0]/30 py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-10 text-[#3C2A21]">Featured Courses</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-3xl border border-[#EAD8C0]">
+                    <h3 class="font-bold text-xl mb-4 text-[#3C2A21]">The TOPIK II Roadmap</h3>
+                    <p class="text-[#6F4E37] mb-6">Master complex grammar through logic. Designed for students aiming for Level 5 and 6.</p>
+                    <a href="courses.html" class="text-[#895E3C] font-bold">See Course Details →</a>
+                </div>
+                <div class="bg-[#3C2A21] text-[#FDFBF9] p-8 rounded-3xl flex flex-col justify-center italic">
+                    <p class="text-lg">"The strategic approach changed how I view Korean grammar. I finally understand the 'Why' behind the patterns."</p>
+                    <span class="mt-4 font-bold not-italic text-[#D4A373]">— TOPIK II Graduate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Blog/Event Links Preview -->
+    <section class="py-20 max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-10 text-[#3C2A21]">Recent Event Logs</h2>
+        <div class="grid md:grid-cols-2 gap-10">
+            <a href="experience.html" class="group">
+                <div class="h-64 rounded-2xl overflow-hidden mb-4">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <h4 class="text-xl font-bold text-[#3C2A21] group-hover:text-[#895E3C]">India-Korea Business Partnership @ The Oberoi</h4>
+                <p class="text-[#6F4E37] mt-2 italic">Corporate interpretation and B2B strategy.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- 5 & 6. Media Feature (YouTube & Instagram) -->
+    <section class="bg-[#3C2A21] py-20 text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-2xl font-bold mb-8 italic text-[#D4A373]"><i class="fab fa-youtube mr-3"></i>Strategic Learning</h2>
+                    <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold mb-8 italic text-[#D4A373]"><i class="fab fa-instagram mr-3"></i>Reel Highlights</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="aspect-[9/16] bg-white/10 rounded-xl flex items-center justify-center text-xs text-white/30 italic">Reel Placeholder</div>
+                        <div class="aspect-[9/16] bg-white/10 rounded-xl flex items-center justify-center text-xs text-white/30 italic">Reel Placeholder</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Footer & Contact Info -->
+    <footer id="contact" class="py-20 text-center border-t border-[#EAD8C0]">
+        <h2 class="text-4xl font-serif italic mb-10 text-[#3C2A21]">Let's Connect.</h2>
+        <div class="flex justify-center gap-10 mb-12">
+            <a href="#" class="text-[#895E3C] text-2xl hover:scale-110 transition"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-[#895E3C] text-2xl hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-[#895E3C] text-2xl hover:scale-110 transition"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="text-xs uppercase tracking-[0.3em] text-[#6F4E37]">© 2026 Vedansh | Seoul & Beyond</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const track = document.getElementById('track');
+        function moveSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        setInterval(() => moveSlide(1), 6000);
+    </script>
+</body>
+</html>

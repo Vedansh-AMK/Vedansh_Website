@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Details | Vedansh - Korean Educator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #FDFBF9; 
+            color: #3C2A21; 
+        }
+        
+        h1, h2, h3 { font-family: 'Lora', serif; }
+
+        .curriculum-dot {
+            width: 6px;
+            height: 6px;
+            background-color: #895E3C;
+            border-radius: 50%;
+            margin-top: 10px;
+            flex-shrink: 0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        .course-image-container {
+            border: 1px solid #EAD8C0;
+            overflow: hidden;
+            border-radius: 1.5rem;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            border-top: 1px solid #EAD8C0;
+            padding-top: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-item label {
+            display: block;
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: #895E3C;
+            margin-bottom: 2px;
+        }
+
+        .detail-item p {
+            font-size: 13px;
+            font-weight: 600;
+            color: #3C2A21;
+        }
+
+        /* Updated Testimonial Grid Styles */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        @media (min-width: 640px) {
+            .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        .testimonial-card {
+            background: #F3EEEA;
+            border-radius: 1rem;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid transparent;
+            transition: border 0.3s ease;
+        }
+        .testimonial-card:hover { border-color: #EAD8C0; }
+    </style>
+</head>
+<body>
+
+    <nav class="bg-white/90 backdrop-blur-md border-b border-[#EAD8C0] py-6 px-6 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-[#3C2A21] tracking-tight"><a href="index.html">VEDANSH</a></h1>
+            <div class="hidden md:flex space-x-8 font-semibold text-[12px] uppercase tracking-widest text-[#6F4E37]">
+                <a href="index.html" class="hover:text-[#3C2A21] transition">Home</a>
+                <a href="articles.html" class="hover:text-[#3C2A21] transition">Articles</a>
+                <a href="courses.html" class="hover:text-[#3C2A21] transition">Courses</a>
+                <a href="resources.html" class="hover:text-[#3C2A21] transition">Resources</a>
+                <a href="experience.html" class="hover:text-[#3C2A21] transition">Experience</a>
+                <a href="portfolio.html" class="hover:text-[#3C2A21] transition">Brands</a>
+            </div>
+            <a href="mailto:vedansh.contact@gmail.com" class="text-[#895E3C] hover:text-[#3C2A21] transition"><i class="fas fa-envelope text-xl"></i></a>
+        </div>
+    </nav>
+
+    <header class="py-20 bg-[#EAD8C0]/10 text-center border-b border-[#EAD8C0]/40">
+        <p class="text-[#895E3C] uppercase text-[11px] font-bold tracking-[0.4em] mb-4">Deep Dive</p>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Course Curriculum</h1>
+        <div class="h-1 w-16 bg-[#895E3C] mx-auto rounded-full"></div>
+    </header>
+
+    <main class="max-w-6xl mx-auto py-20 px-6 space-y-40">
+
+        <section id="beginner" class="flex flex-col md:flex-row gap-12 items-start">
+            <div class="w-full md:w-1/2 md:sticky md:top-32">
+                <div class="course-image-container aspect-[4/5] md:aspect-square shadow-xl">
+                    <img src="ad1.jpg" alt="Beginner Course" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/2">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-[#895E3C]">Batch 01</span>
+                <h2 class="text-3xl font-bold mt-2 mb-4">Basic Korean Course (Level 1)</h2>
+                <p class="text-[#6F4E37] font-medium leading-relaxed mb-8 italic">Master the foundations of the Korean script and essential conversational building blocks.</p>
+                
+                <h3 class="text-sm font-bold uppercase tracking-widest mb-4">What you'll learn</h3>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex gap-4"><div class="curriculum-dot"></div><p class="text-sm text-[#6F4E37]">Comprehensive Hangeul mastery and Batchim logic.</p></li>
+                    <li class="flex gap-4"><div class="curriculum-dot"></div><p class="text-sm text-[#6F4E37]">Basic Sentence Architecture and essential particles.</p></li>
+                    <li class="flex gap-4"><div class="curriculum-dot"></div><p class="text-sm text-[#6F4E37]">Real-world survival skills: Introductions and ordering food.</p></li>
+                </ul>
+
+                <div class="details-grid">
+                    <div class="detail-item"><label>Format</label><p>Recorded Lectures</p></div>
+                    <div class="detail-item"><label>Language</label><p>Hindi</p></div>
+                    <div class="detail-item"><label>Mode</label><p>Google Classroom</p></div>
+                    <div class="detail-item"><label>Price</label><p>INR 1999</p></div>
+                </div>
+
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <a href="mailto:vedansh.contact@gmail.com" class="px-6 py-3 bg-[#3C2A21] text-white text-[10px] font-bold uppercase tracking-widest rounded hover:bg-[#5D4037] transition flex items-center gap-2">
+                        <i class="fas fa-envelope"></i> Email Inquiry
+                    </a>
+                    <a href="https://www.instagram.com/askmekorean?igsh=dWlxdW00YzdvNXhi" target="_blank" class="px-6 py-3 border border-[#3C2A21] text-[#3C2A21] text-[10px] font-bold uppercase tracking-widest rounded hover:bg-[#3C2A21] hover:text-white transition flex items-center gap-2">
+                        <i class="fab fa-instagram"></i> Instagram DM
+                    </a>
+                </div>
+
+                <h3 class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#895E3C]">Student Feedback</h3>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p class="text-[12px] text-[#6F4E37] italic leading-relaxed mb-4">"I used to find Hangeul so confusing, but Vedansh made the logic behind the script so easy to understand."</p>
+                        <span class="text-[9px] font-bold uppercase tracking-widest text-[#3C2A21]">— Aditi R.</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="text-[12px] text-[#6F4E37] italic leading-relaxed mb-4">"The structured approach helped me start reading sentences in just 10 days. Highly recommend!"</p>
+                        <span class="text-[9px] font-bold uppercase tracking-widest text-[#3C2A21]">— Sneha K.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="topik1" class="flex flex-col md:flex-row-reverse gap-12 items-start">
+            <div class="w-full md:w-1/2 md:sticky md:top-32">
+                <div class="course-image-container aspect-[4/5] md:aspect-square shadow-xl">
+                    <img src="ad2.jpg" alt="TOPIK I Course" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/2">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-[#895E3C]">Batch 02</span>
+                <h2 class="text-3xl font-bold mt-2 mb-4">TOPIK I Prep (Levels 1-2)</h2>
+                <p class="text-[#6F4E37] font-medium leading-relaxed mb-8 italic">A strategic exam-oriented course designed to help you secure a perfect score in TOPIK I.</p>
+                
+                <h3 class="text-sm font-bold uppercase tracking-widest mb-4">What you'll learn</h3>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex gap-4"><div class="curriculum-dot"></div><p class="text-sm text-[#6F4E37]">Intensive Vocabulary Blitz: 1000+ words.</p></li>
+                    <li class="flex gap-4"><div class="curriculum-dot"></div><p class="text-sm text-[#6F4E37]">Grammar Patterns: Mastering connectors and endings.</p></li>
+                    <li class="flex gap-4"><div class="curriculum-dot"></div><p class="text-sm text-[#6F4E37]">Exam Strategy: Time management shortcuts.</p></li>
+                </ul>
+
+                <div class="details-grid">
+                    <div class="detail-item"><label>Format</label><p>Recorded Lectures</p></div>
+                    <div class="detail-item"><label>Language</label><p>English</p></div>
+                    <div class="detail-item"><label>Mode</label><p>Google Classroom</p></div>
+                    <div class="detail-item"><label>Price</label><p>INR 2999</p></div>
+                </div>
+
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <a href="mailto:vedansh.contact@gmail.com" class="px-6 py-3 bg-[#3C2A21] text-white text-[10px] font-bold uppercase tracking-widest rounded hover:bg-[#5D4037] transition flex items-center gap-2">
+                        <i class="fas fa-envelope"></i> Email Inquiry
+                    </a>
+                    <a href="https://www.instagram.com/askmekorean?igsh=dWlxdW00YzdvNXhi" target="_blank" class="px-6 py-3 border border-[#3C2A21] text-[#3C2A21] text-[10px] font-bold uppercase tracking-widest rounded hover:bg-[#3C2A21] hover:text-white transition flex items-center gap-2">
+                        <i class="fab fa-instagram"></i> Instagram DM
+                    </a>
+                </div>
+
+                <h3 class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#895E3C]">Student Feedback</h3>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p class="text-[12px] text-[#6F4E37] italic leading-relaxed mb-4">"The pattern recognition techniques taught in this course were a lifesaver for the listening section."</p>
+                        <span class="text-[9px] font-bold uppercase tracking-widest text-[#3C2A21]">— Rahul S.</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="text-[12px] text-[#6F4E37] italic leading-relaxed mb-4">"Passed my Level 2 on the first try thanks to the vocabulary sets provided in this batch!"</p>
+                        <span class="text-[9px] font-bold uppercase tracking-widest text-[#3C2A21]">— Ishan T.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="topik2" class="flex flex-col md:flex-row gap-12 items-start">
+            <div class="w-full md:w-1/2 md:sticky md:top-32">
+                <div class="course-image-container aspect-[4/5] md:aspect-square shadow-xl">
+                    <img src="ad3.jpg" alt="TOPIK II Course" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/2">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-[#895E3C]">Batch 03</span>
+                <h2 class="text-3xl font-bold mt-2 mb-4">TOPIK II Prep (Levels 3-4)</h2>
+                <p class="text-[#6F4E37] font-medium leading-relaxed mb-8 italic">Advanced training focused on academic writing, Hanja, and professional-level fluency.</p>
+                
+                <h3 class="text-sm font-bold uppercase tracking-widest mb-4">What you'll learn</h3>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex gap-4"><div class="curriculum-dot"></div><p class="text-sm text-[#6F4E37]">Task 54 Writing: Advanced essay structuring.</p></li>
+                    <li class="flex gap-4"><div class="curriculum-dot"></div><p class="text-sm text-[#6F4E37]">Hanja Etymology: Root-based vocabulary building.</p></li>
+                    <li class="flex gap-4"><div class="curriculum-dot"></div><p class="text-sm text-[#6F4E37]">Advanced Listening: News broadcasts and lectures.</p></li>
+                </ul>
+
+                <div class="details-grid">
+                    <div class="detail-item"><label>Format</label><p>Recorded Lectures</p></div>
+                    <div class="detail-item"><label>Language</label><p>Hindi</p></div>
+                    <div class="detail-item"><label>Mode</label><p>Google Classroom</p></div>
+                    <div class="detail-item"><label>Price</label><p>INR 3999</p></div>
+                </div>
+
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <a href="mailto:vedansh.contact@gmail.com" class="px-6 py-3 bg-[#3C2A21] text-white text-[10px] font-bold uppercase tracking-widest rounded hover:bg-[#5D4037] transition flex items-center gap-2">
+                        <i class="fas fa-envelope"></i> Email Inquiry
+                    </a>
+                    <a href="https://www.instagram.com/askmekorean?igsh=dWlxdW00YzdvNXhi" target="_blank" class="px-6 py-3 border border-[#3C2A21] text-[#3C2A21] text-[10px] font-bold uppercase tracking-widest rounded hover:bg-[#3C2A21] hover:text-white transition flex items-center gap-2">
+                        <i class="fab fa-instagram"></i> Instagram DM
+                    </a>
+                </div>
+
+                <h3 class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#895E3C]">Student Feedback</h3>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p class="text-[12px] text-[#6F4E37] italic leading-relaxed mb-4">"The Hanja etymology lessons were a game changer. I can now 'guess' meanings of new academic terms!"</p>
+                        <span class="text-[9px] font-bold uppercase tracking-widest text-[#3C2A21]">— Priya M.</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="text-[12px] text-[#6F4E37] italic leading-relaxed mb-4">"Writing Task 54 used to be a nightmare. This course broke it down into simple, logical steps."</p>
+                        <span class="text-[9px] font-bold uppercase tracking-widest text-[#3C2A21]">— Arjun V.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-12 text-center border-t border-[#EAD8C0]">
+        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-[#6F4E37]">© 2026 Vedansh | Korean Language Educator</p>
+    </footer>
+
+</body>
+</html>

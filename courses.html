@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | Vedansh - Korean Educator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #FDFBF9; 
+            color: #3C2A21; 
+            font-size: 1.05rem; 
+        }
+        
+        h1, h2, h3 { font-family: 'Lora', serif; }
+
+        .achievement-card {
+            background: #FFFFFF;
+            border: 1px solid #EAD8C0;
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -10px rgba(60, 42, 33, 0.1);
+        }
+
+        .gallery-item img {
+            transition: transform 0.7s ease, filter 0.7s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+            filter: grayscale(0);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="bg-white/90 backdrop-blur-md border-b border-[#EAD8C0] py-6 px-6 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-[#3C2A21] tracking-tight"><a href="index.html">VEDANSH</a></h1>
+            <div class="hidden md:flex space-x-8 font-semibold text-[12px] uppercase tracking-widest text-[#6F4E37]">
+                <a href="index.html" class="hover:text-[#3C2A21] transition">Home</a>
+                <a href="articles.html" class="hover:text-[#3C2A21] transition">Articles</a>
+                <a href="courses.html" class="text-[#3C2A21] border-b-2 border-[#895E3C] pb-1">Courses</a>
+                <a href="resources.html" class="hover:text-[#3C2A21] transition">Resources</a>
+                <a href="experience.html" class="hover:text-[#3C2A21] transition">Experience</a>
+                <a href="portfolio.html" class="hover:text-[#3C2A21] transition">Brands</a>
+            </div>
+            <a href="mailto:your-email@gmail.com" class="text-[#895E3C] hover:text-[#3C2A21] transition"><i class="fas fa-envelope text-xl"></i></a>
+        </div>
+    </nav>
+
+    <header class="py-16 bg-[#EAD8C0]/20 text-center border-b border-[#EAD8C0]/40">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Teaching & Courses</h1>
+        <div class="h-1 w-16 bg-[#895E3C] mx-auto mb-6 rounded-full"></div>
+        <p class="text-[#6F4E37] tracking-[0.2em] uppercase text-[11px] font-bold">Korean Teaching & Student Success</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto py-16 px-6">
+        
+        <section class="flex flex-col md:flex-row items-center gap-16 mb-32">
+            <div class="w-full md:w-1/2 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute inset-0 border-2 border-[#EAD8C0] rounded-full scale-105 group-hover:scale-110 transition duration-700"></div>
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl relative z-10">
+                        <img src="portrait.jpeg" alt="Vedansh Varshney" 
+                             class="w-full h-full object-cover transition duration-700"
+                             style="transform: scale(1.4) translateX(-2%) translateY(2%);"> 
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 text-center md:text-left">
+                <p class="text-[#895E3C] uppercase text-[11px] font-bold tracking-[0.3em] mb-2">Vedansh Varshney</p>
+                <h2 class="text-3xl font-bold mb-6 text-[#3C2A21]">Meet Your Educator</h2>
+                <p class="text-lg text-[#6F4E37] leading-relaxed mb-6">
+                    I am a Korean Language Educator and Content Creator from India. I help students learn and master Korean through fun and immersive language learning approaches.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                    <span class="px-4 py-2 bg-white border border-[#EAD8C0] rounded-full text-[10px] font-bold uppercase tracking-widest text-[#895E3C]">Basic Hangeul</span>
+                    <span class="px-4 py-2 bg-white border border-[#EAD8C0] rounded-full text-[10px] font-bold uppercase tracking-widest text-[#895E3C]">Korean Level 1</span>
+                    <span class="px-4 py-2 bg-white border border-[#EAD8C0] rounded-full text-[10px] font-bold uppercase tracking-widest text-[#895E3C]">TOPIK 1 & 2</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-32 py-16 bg-[#F3EEEA]/50 rounded-3xl border border-[#EAD8C0]/40 px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-3">Academic Credentials</h2>
+                <p class="text-[#6F4E37] uppercase text-[10px] tracking-[0.3em] font-bold">KOREAN LANGUAGE</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="achievement-card p-8 rounded-2xl flex items-start gap-6 relative group">
+                    <div class="w-14 h-14 shrink-0 bg-[#3C2A21] text-white rounded-full flex items-center justify-center shadow-md">
+                        <i class="fas fa-certificate text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">TOPIK II Level 5</h3>
+                        <p class="text-sm text-[#6F4E37] leading-relaxed mb-4">Achieved professional proficiency score on the first attempt.</p>
+                        <button onclick="document.getElementById('marksheet-modal').classList.remove('hidden')" 
+                           class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[#895E3C] hover:text-[#3C2A21] transition">
+                            <i class="fas fa-file-invoice"></i> View Marksheet
+                        </button>
+                    </div>
+                </div>
+                <div class="achievement-card p-8 rounded-2xl flex items-start gap-6">
+                    <div class="w-14 h-14 shrink-0 bg-[#3C2A21] text-white rounded-full flex items-center justify-center shadow-md">
+                        <i class="fas fa-award text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">KSI Level 6 (3B)</h3>
+                        <p class="text-sm text-[#6F4E37] leading-relaxed mb-4">King Sejong Institute graduate with a 100% scholarship for excellence in Levels 3-6.</p>
+                        <a href="ksi.jpg" target="_blank"
+                           class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[#895E3C] hover:text-[#3C2A21] transition">
+                            <i class="fas fa-file-pdf"></i> View Certificate
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-32 px-6">
+            <div class="max-w-5xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-2">Achievements</h2>
+                <p class="text-[#895E3C] uppercase text-[9px] italic tracking-[0.4em] font-bold mb-8">
+                    Korean Culture Centre India, Delhi
+                </p>
+                <p class="text-lg text-[#6F4E37] leading-relaxed max-w-2xl mx-auto mb-12">
+                    Ranked 2nd in the King Sejong Institute Korean Speaking Contest (Delhi Regional Round) and got a fully sponsored 1-week trip to Seoul, South Korea for cultural experiences.   
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="gallery-item aspect-square overflow-hidden rounded-2xl bg-[#EAD8C0]/20 border border-[#EAD8C0]/40">
+                        <img src="img1.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item aspect-square overflow-hidden rounded-2xl bg-[#EAD8C0]/20 border border-[#EAD8C0]/40">
+                        <img src="img2.jpg" class="w-full h-full object-cover" style="object-position: center 30%;">
+                    </div>
+                    <div class="gallery-item aspect-square overflow-hidden rounded-2xl bg-[#EAD8C0]/20 border border-[#EAD8C0]/40">
+                        <img src="img3.jpg" class="w-full h-full object-cover" style="object-position: center 75%;">
+                    </div>
+                    <div class="gallery-item aspect-square overflow-hidden rounded-2xl bg-[#EAD8C0]/20 border border-[#EAD8C0]/40">
+                        <img src="img4.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item aspect-square overflow-hidden rounded-2xl bg-[#EAD8C0]/20 border border-[#EAD8C0]/40">
+                        <img src="img5.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item aspect-square overflow-hidden rounded-2xl bg-[#EAD8C0]/20 border border-[#EAD8C0]/40">
+                        <img src="img6.jpg" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section class="mb-12">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-3">Available Batches</h2>
+                <p class="text-[#6F4E37] uppercase text-[10px] tracking-[0.3em] font-bold">Find your level</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white border border-[#EAD8C0] p-8 rounded-xl shadow-sm flex flex-col">
+                    <div class="text-[#895E3C] mb-4 text-[10px] font-bold uppercase tracking-widest">Beginner</div>
+                    <h3 class="text-xl font-bold mb-4">Hangeul & Foundations</h3>
+                    <p class="text-sm text-[#6F4E37] leading-relaxed mb-8 flex-grow">A 2-month deep dive into reading, writing, and natural pronunciation.</p>
+                    <a href="course-detail.html#beginner" class="block text-center py-3.5 px-4 border border-[#3C2A21] text-[#3C2A21] text-[10px] font-bold uppercase tracking-widest rounded-lg hover:bg-[#3C2A21] hover:text-white transition">View Details</a>
+                </div>
+
+                <div class="bg-white border-2 border-[#895E3C] p-8 rounded-xl shadow-md flex flex-col relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#895E3C] text-white px-4 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest">High Demand</div>
+                    <div class="text-[#895E3C] mb-4 text-[10px] font-bold uppercase tracking-widest">Intermediate</div>
+                    <h3 class="text-xl font-bold mb-4">TOPIK I (Levels 1-2)</h3>
+                    <p class="text-sm text-[#6F4E37] leading-relaxed mb-8 flex-grow">Strategic exam prep focused on pattern recognition and listening skills.</p>
+                    <a href="course-detail.html#topik1" class="block text-center py-3.5 px-4 bg-[#895E3C] text-white text-[10px] font-bold uppercase tracking-widest rounded-lg transition shadow-md">View Details</a>
+                </div>
+
+                <div class="bg-white border border-[#EAD8C0] p-8 rounded-xl shadow-sm flex flex-col">
+                    <div class="text-[#895E3C] mb-4 text-[10px] font-bold uppercase tracking-widest">Advanced</div>
+                    <h3 class="text-xl font-bold mb-4">TOPIK II Mastery</h3>
+                    <p class="text-sm text-[#6F4E37] leading-relaxed mb-8 flex-grow">The ultimate roadmap for writing Task 54 and advanced Hanja etymology.</p>
+                    <a href="course-detail.html#topik2" class="block text-center py-3.5 px-4 border border-[#3C2A21] text-[#3C2A21] text-[10px] font-bold uppercase tracking-widest rounded-lg hover:bg-[#3C2A21] hover:text-white transition">View Details</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-12 text-center border-t border-[#EAD8C0]">
+        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-[#6F4E37]">© 2026 Vedansh | Korean Language Educator</p>
+    </footer>
+
+    <div id="marksheet-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#3C2A21]/90 backdrop-blur-sm">
+        <div class="relative max-w-2xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl">
+            <button onclick="document.getElementById('marksheet-modal').classList.add('hidden')" 
+                    class="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition z-50">
+                <i class="fas fa-times text-[#3C2A21]"></i>
+            </button>
+            <div class="p-2 max-h-[80vh] overflow-y-auto">
+                <img src="topik.jpg" alt="TOPIK II Level 5 Marksheet" class="w-full h-auto rounded-lg">
+            </div>
+            <div class="p-4 text-center bg-gray-50">
+                <p class="text-[10px] font-bold uppercase tracking-widest text-[#6F4E37]">Official TOPIK II Score Report — Vedansh Varshney</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
